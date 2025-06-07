@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;&amp;&amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Data from table MARD has been successfully copied to table ZSTOCK_LEVELS.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>An error occurred while copying data from table MARD. Error code:</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>No data found in table ZSTOCK_LEVELS.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Material field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Quantity field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Plant field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Location field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Quantity must be greater than zero!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Sales document field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Item field cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Data updated successfully!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Error occurred during update!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Data saved successfully!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Error occurred during insert!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Error saving log!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Transaction error – all changes have been rolled back!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>An entry with the given invoice number already exists in the log!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Quantity must be greater than zero!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Opening PR creation transaction (ME51N). Please complete the data manuall</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Error saving data to the database!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>No stock item available – cannot subtract!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Email cannot be empty!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>023</MSGNR>
+     <TEXT>Cannot subtract more than current stock! Available: &amp;1, tried: &amp;2.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>024</MSGNR>
+     <TEXT>Error displaying ALV.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
