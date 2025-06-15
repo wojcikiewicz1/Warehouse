@@ -4,10 +4,7 @@
 *&
 *&---------------------------------------------------------------------*
 
-INCLUDE ZRUN_WAREHOUSE_MANAGER_TOP              .    " Global Data
-
- INCLUDE ZRUN_WAREHOUSE_MANAGER_O01              .  " PBO-Modules
- INCLUDE ZRUN_WAREHOUSE_MANAGER_I01              .  " PAI-Modules
- INCLUDE ZRUN_WAREHOUSE_MANAGER_F01              .  " FORM-Routines
-
-INCLUDE zrun_warehouse_manager_stato06.
+INCLUDE zrun_warehouse_manager_top              .  " Global Data
+INCLUDE zrun_warehouse_manager_o01              .  " PBO-Modules
+INCLUDE zrun_warehouse_manager_i01              .  " PAI-Modules
+INCLUDE zrun_warehouse_manager_f01              .  " FORM-Routines

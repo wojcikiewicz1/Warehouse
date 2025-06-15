@@ -330,27 +330,10 @@ FORM save_stock_data_consumption.
 
           IF sy-subrc = 0.
             " --- Sending emails after saving warehouse data ---
-            PERFORM check_and_notify_low_stock  USING ls_stock.
-
-            " --- A popup appears after the email is sent ---
-            DATA lv_answer TYPE c.
-            CALL FUNCTION 'POPUP_TO_CONFIRM'
-              EXPORTING
-                titlebar      = 'Information'
-                text_question = 'The low stock notification emails were sent successfully. Would you like to create a PR?'
-                text_button_1 = 'Yes'
-                text_button_2 = 'No'
-              IMPORTING
-                answer        = lv_answer.
-
-            IF lv_answer = '1'.
-              MESSAGE s019(z_message_agh2402_pr).
-
-              CALL TRANSACTION 'ME51N' AND SKIP FIRST SCREEN.
-            ENDIF.
-
             COMMIT WORK.
             MESSAGE s011(z_message_agh2402_pr).
+
+            PERFORM check_and_notify_low_stock  USING ls_stock.
 
             CLEAR: mard-matnr,
                    mard-werks,
@@ -391,11 +374,13 @@ FORM save_stock_data_consumption.
 ENDFORM.
 
 FORM check_and_notify_low_stock USING is_stock TYPE zstock_levels.
-  DATA: lv_min_stock    TYPE zstock_levels-min_stock,
-        lo_send_request TYPE REF TO cl_bcs,
-        lo_document     TYPE REF TO cl_document_bcs,
-        lt_content      TYPE bcsy_text,
-        lo_recipient    TYPE REF TO if_recipient_bcs.
+  DATA: lv_min_stock     TYPE zstock_levels-min_stock,
+        lv_current_labst TYPE zstock_levels-labst,
+        lv_answer        TYPE c,
+        lo_send_request  TYPE REF TO cl_bcs,
+        lo_document      TYPE REF TO cl_document_bcs,
+        lt_content       TYPE bcsy_text,
+        lo_recipient     TYPE REF TO if_recipient_bcs.
 
   SELECT SINGLE min_stock INTO @lv_min_stock
     FROM zstock_levels
@@ -403,9 +388,15 @@ FORM check_and_notify_low_stock USING is_stock TYPE zstock_levels.
       AND werks = @is_stock-werks
       AND lgort = @is_stock-lgort.
 
+  SELECT SINGLE labst INTO @lv_current_labst
+    FROM zstock_levels
+    WHERE matnr = @is_stock-matnr
+      AND werks = @is_stock-werks
+      AND lgort = @is_stock-lgort.
+
   CHECK sy-subrc = 0.
 
-  IF is_stock-labst < lv_min_stock.
+  IF lv_current_labst < lv_min_stock.
 
     APPEND |Attention! The stock level of material { is_stock-matnr } has fallen below the minimum level!| TO lt_content.
     APPEND |Current stock: { is_stock-labst },  threshold: { lv_min_stock }| TO lt_content.
@@ -433,6 +424,23 @@ FORM check_and_notify_low_stock USING is_stock TYPE zstock_levels.
 
     lo_send_request->send( i_with_error_screen = 'X' ).
     COMMIT WORK.
+
+    " Popup after sending email
+    CALL FUNCTION 'POPUP_TO_CONFIRM'
+      EXPORTING
+        titlebar      = 'Information'
+        text_question = 'The low stock notification emails were sent successfully. Would you like to create a PR?'
+        text_button_1 = 'Yes'
+        text_button_2 = 'No'
+      IMPORTING
+        answer        = lv_answer.
+
+    IF lv_answer = '1'.
+      MESSAGE s019(z_message_agh2402_pr).
+      CALL TRANSACTION 'ME51N' AND SKIP FIRST SCREEN.
+    ELSE.
+      MESSAGE s025(z_message_agh2402_pr).
+    ENDIF.
 
   ENDIF.
 ENDFORM.

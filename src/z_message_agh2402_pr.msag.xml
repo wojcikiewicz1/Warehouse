@@ -149,13 +149,19 @@
      <SPRSL>E</SPRSL>
      <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
      <MSGNR>023</MSGNR>
-     <TEXT>Cannot subtract more than current stock! Available: &amp;1, tried: &amp;2.</TEXT>
+     <TEXT>Cannot subtract more than current stock! Available: &amp;1, tried to sub: &amp;2.</TEXT>
     </T100>
     <T100>
      <SPRSL>E</SPRSL>
      <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
      <MSGNR>024</MSGNR>
      <TEXT>Error displaying ALV.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>Z_MESSAGE_AGH2402_PR</ARBGB>
+     <MSGNR>025</MSGNR>
+     <TEXT>Low stock notification emails were sent successfully.</TEXT>
     </T100>
    </T100>
   </asx:values>
